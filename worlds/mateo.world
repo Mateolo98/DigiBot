@@ -1,0 +1,195 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+	<world name="default">
+		<!-- A global light source -->
+		<include>
+			<uri>model://sun</uri>
+		</include>
+
+		<!-- A ground plane -->
+		<include>
+			<uri>model://ground_plane</uri>
+		</include>
+    <!-- Area of the robot movement -->
+<!-- horizontal -->
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>0.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>1.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>2.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>3.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>4.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-0.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-1.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-2.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-3.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-4.5 5 0 0 0 3.1415</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>0.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>1.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>2.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>3.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>4.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-0.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-1.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-2.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-3.5 -5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-4.5 -5 0 0 0 0</pose>
+    </include>
+<!-- vertical -->
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 0.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 1.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 2.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 3.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 4.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 -0.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 -1.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 -2.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 -3.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>5 -4.5 0 0 0 1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 0.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 1.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 2.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 3.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 4.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 -0.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 -1.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 -2.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 -3.5 0 0 0 -1.57</pose>
+    </include>
+    <include>
+        <uri>model://bookshelf</uri>
+        <pose>-5 -4.5 0 0 0 -1.57</pose>
+    </include>
+    <!-- Finish Area of the robot movement -->
+<!-- Objects the car need to avoid -->
+    <include>
+        <uri>model://construction_barrel</uri>
+        <pose>-2.5 -2.5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://construction_barrel</uri>
+        <pose>-2.5 2.5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://construction_barrel</uri>
+        <pose>2.5 -2.5 0 0 0 0</pose>
+    </include>
+    <include>
+        <uri>model://construction_barrel</uri>
+        <pose>2.5 2.5 0 0 0 0</pose>
+    </include>
+	</world>
+</sdf>
