@@ -3,12 +3,12 @@
   <!-- Tf for all the frames of the robot --> 
   <!-- Transformation Configuration ... Setting Up the Relationships Between Coordinate Frames -->
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.1 0 0.05 0 0 0 base_link laser 30" />
-  <node pkg="tf" type="static_transform_publisher" name="imu_broadcaster" args="0.1 0 0 0 0 0 base_link imu 30" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="imu_broadcaster" args="0.1 0 0 0 0 0 base_link imu 30" /> -->
   <!-- <node pkg="tf" type="static_transform_publisher" name="base_link_broadcaster" args="0 0 0.08 0 0 0 base_footprint base_link 30" /> -->
 
   <node pkg="digitallab" type="diff_drive_odometry.py" name="diff_drive_odometry" output="screen">
-    <rosparam param="ticks_meter">10000</rosparam>
-    <rosparam param="base_width">0.339</rosparam>
+    <rosparam param="ticks_meter">10950</rosparam>
+    <rosparam param="base_width">0.25</rosparam>
   </node>
      
   <!-- Extended Kalman Filter from robot_pose_ekf Node-->

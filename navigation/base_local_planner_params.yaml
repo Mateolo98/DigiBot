@@ -1,11 +1,11 @@
 TrajectoryPlannerROS:
-  max_vel_x: 0.3
-  min_vel_x: 0.1
+  max_vel_x: 1.0
+  min_vel_x: 0.4
 
-  max_rotational_vel: 0.3
-  min_in_place_rotational_vel: 0.2
+  max_rotational_vel: 1.0
+  min_in_place_rotational_vel: 0.4
 
-  acc_lim_th: 0.25
+  acc_lim_th: 3.2
   acc_lim_x: 0.5
 
   vx_samples: 3                       #default is 3, I feel like putting 5. I'm the architect after all! :)

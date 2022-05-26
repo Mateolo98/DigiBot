@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+<node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" args="0.1 0 0.05 0 0 0 base_link laser 100" />
+<node pkg="tf" type="static_transform_publisher" name="imu_broadcaster" args="0.1 0 0 0 0 0 base_link imu 100" />
+<node pkg="digitallab" type="diff_drive_odometry.py" name="diff_drive_odometry" output="screen">
+  <rosparam param="ticks_meter">10000</rosparam>
+  <rosparam param="base_width">0.215</rosparam>
+</node>
+<node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true" output="screen">
+  <rosparam command="load" file="$(find digitallab)/scripts/ekf_template.yaml" />
+</node>
 <arg name="scan_topic"  default="/scan" />
 <arg name="base_frame"  default="base_link"/>
 <arg name="odom_frame"  default="odom"/>
-<node name="map_server" pkg="map_server" type="map_server" args="$(find digitallab)/worlds/office1.yaml"/>
+<arg name="map_frame"  default="map"/>
+<!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find digitallab)/worlds/office1.yaml"/> -->
 <node name="rviz" pkg="rviz" type="rviz" args="-d $(find digitallab)/rviz/robot_config.rviz"/>
  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping">
     <param name="base_frame" value="$(arg base_frame)"/>
     <param name="odom_frame" value="$(arg odom_frame)"/>
-    <param name="map_update_interval" value="5.0"/> <!--Reduce to 3.0 to increase the update frecuency-->
+    <param name="map_frame" value="$(arg map_frame)"/>
+    <param name="map_update_interval" value="1.0"/> <!--Reduce to 3.0 to increase the update frecuency-->
     <param name="maxUrange" value="6.0"/><!--Useful range of the laser default 80-->
     <param name="maxRange" value="8.0"/>
     <param name="sigma" value="0.05"/><!--make the point match try to increase them and check the result default 0.05-->
@@ -18,14 +29,14 @@
     <param name="iterations" value="5"/>
     <param name="lsigma" value="0.075"/><!--try increasing it-->
     <param name="ogain" value="3.0"/><!--maybe useful-->
-    <param name="lskip" value="0"/>
+    <param name="lskip" value="3"/>
     <param name="minimumScore" value="0"/> <!--score up to 600 -->
     <param name="srr" value="0.01"/>
     <param name="srt" value="0.02"/>
     <param name="str" value="0.01"/>
     <param name="stt" value="0.02"/>
     <param name="linearUpdate" value="0.3"/>
-    <param name="angularUpdate" value="0.236"/>
+    <param name="angularUpdate" value="0.5"/>
     <param name="temporalUpdate" value="-1.0"/>
     <param name="resampleThreshold" value="0.5"/>
     <param name="particles" value="80"/>
