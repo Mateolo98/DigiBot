@@ -101,7 +101,7 @@ Visualization Manager:
       Axes Radius: 0.00999999978
       Class: rviz/PoseArray
       Color: 255; 25; 0
-      Enabled: true
+      Enabled: false
       Head Length: 0.0700000003
       Head Radius: 0.0299999993
       Name: PoseArray
@@ -110,7 +110,7 @@ Visualization Manager:
       Shape: Arrow (Flat)
       Topic: /particlecloud
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
@@ -158,7 +158,7 @@ Visualization Manager:
         All Enabled: true
         base_link:
           Value: true
-        imu:
+        imu_frame:
           Value: true
         laser:
           Value: true
@@ -175,7 +175,7 @@ Visualization Manager:
         map:
           odom:
             base_link:
-              imu:
+              imu_frame:
                 {}
               laser:
                 {}

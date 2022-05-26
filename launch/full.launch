@@ -7,19 +7,19 @@
     <!-- <node pkg="tf" type="static_transform_publisher" name="imu_broadcaster" args="0.1 0 0 0 0 0 base_link imu_frame 100" /> -->
     <node pkg="digitallab" type="diff_drive_odometry.py" name="diff_drive_odometry" output="screen">
         <rosparam param="ticks_meter">10950</rosparam>
-        <rosparam param="base_width">0.25</rosparam>
+        <rosparam param="base_width">0.245</rosparam>
     </node>
     <node pkg="robot_localization" type="ekf_localization_node" name="ekf_se" clear_params="true" output="screen">
         <rosparam command="load" file="$(find digitallab)/scripts/ekf_template.yaml" />
     </node>
     <include file="$(find digitallab)/launch/amcl_diff.launch" />
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
-        <!-- <rosparam file="$(find digitallab)/navigation/costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find digitallab)/navigation/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find digitallab)/navigation/costmap_common_params.yaml" command="load" ns="local_costmap" />
         <rosparam file="$(find digitallab)/navigation/local_costmap_params.yaml" command="load" />
         <rosparam file="$(find digitallab)/navigation/global_costmap_params.yaml" command="load" />
         <rosparam file="$(find digitallab)/navigation/base_local_planner_params.yaml" command="load" />
-        <rosparam file="$(find digitallab)/navigation/move_base_params.yaml" command="load" /> -->
+        <rosparam file="$(find digitallab)/navigation/move_base_params.yaml" command="load" />
 	</node>
     <node name="map_server" pkg="map_server" type="map_server" args="$(find digitallab)/worlds/office1.yaml"/>
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find digitallab)/rviz/robot_config.rviz">
